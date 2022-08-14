@@ -1,0 +1,11 @@
+.thoughts-list {
+    list-style: none;
+    padding: 0;
+    /* margin-left: 12rem; */
+    /* justify-content: center; */
+  }
+  
+  .thoughts-list__fallback {
+    color: white;
+    text-align: center;
+  }

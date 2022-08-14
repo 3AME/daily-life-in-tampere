@@ -15,7 +15,7 @@ function App() {
       <View />
       <Sports />
       <Life />
-      <Thoughts />
+      <Thoughts/>
       <Footer />
     </div>
   );
