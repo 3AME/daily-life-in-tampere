@@ -5,6 +5,7 @@ import originViewsData from './ViewData.js';
 import Card from '../UI/Card.js'
 import NewView from '../NewView/NewView';
 import { useState } from 'react';
+import ViewDataList from './ViewDataList/ViewDataList';
 
 const View = () => {
   const [views, setViews] = useState(originViewsData);
@@ -17,6 +18,7 @@ const View = () => {
     <section id='view'>
       <h5>Get to know</h5>
       <h2>Places can be visited</h2>
+      <ViewDataList />
       <NewView onAddView={addViewHandler}/>
       <Card className="container view__container">
       <ViewList items ={views}/>
