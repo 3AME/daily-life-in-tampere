@@ -1,0 +1,39 @@
+.new-view__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .new-view__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .new-view__control input {
+    display: block;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 775px;
+    line-height: 1.5rem;
+    /* max-width: 100%; */
+  }
+
+  .new-view__control input:focus {
+    outline: none;
+    background: #fad0ec;
+    border-color: #8b005d;
+  }
+  
+  .new-view__actions {
+    text-align: right;
+  }
+
+  .new-view__controls.invalid input{
+    border-color: red;
+    background: rgb(247, 159, 159);
+  }

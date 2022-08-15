@@ -2,13 +2,14 @@ import React from "react";
 import ViewDate from "./ViewDate";
 import Link from '@mui/material/Link';
 import "./ViewItem.css";
+import Card from '../UI/Card.js'
 
 
 const ViewItem = (props) => {
     // alert(props.img);
   return (
     <li>
-      <div className="view-item">
+      <Card className="view-item">
         <ViewDate date={props.date}/>
         <div className="view-item__description">
             {/* <h2>{props.title}</h2> */}
@@ -16,7 +17,7 @@ const ViewItem = (props) => {
             <div className="view-item__dairy">{props.diary}</div>
             <div><img src={props.img} alt=""></img></div>
         </div>
-      </div>
+      </Card>
     </li>
   );
 };
