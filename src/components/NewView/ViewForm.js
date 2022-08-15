@@ -1,43 +1,68 @@
 import React, { useState } from "react";
-import "./ViewForm.css";
+import styles from "./ViewForm.module.css";
 
 const ViewForm = (props) => {
   const [enteredLocation, setEnteredLocation] = useState("");
   const [enteredLocationLink, setEnteredLocationLink] = useState("");
   const [enteredDairy, setEnteredDairy] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [isValid, setIsValid] = useState(true);
   const locationChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
     setEnteredLocation(event.target.value);
   };
   const locationLinkChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
     setEnteredLocationLink(event.target.value);
   };
   const dairyChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
     setEnteredDairy(event.target.value);
   };
   const dateChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
     setEnteredDate(event.target.value);
   };
-  const submitHandler =(event) =>{
+  const submitHandler = (event) => {
     event.preventDefault();
-
-    const viewData = {
-        location:enteredLocation,
-        locationLink: enteredLocationLink,
-        diary: enteredDairy,
-        date: new Date(enteredDate),
+    if (
+      enteredLocation.trim().length === 0 ||
+      enteredLocationLink.trim().length === 0 ||
+      enteredDairy.trim().length === 0 ||
+      enteredDate.trim().length === 0
+    ) {
+      setIsValid(false);
+      return;
     }
+    const viewData = {
+      location: enteredLocation,
+      locationLink: enteredLocationLink,
+      diary: enteredDairy,
+      date: new Date(enteredDate),
+    };
 
     props.onSaveViewData(viewData);
-    setEnteredLocation('');
-    setEnteredLocationLink('');
-    setEnteredDairy('');
-    setEnteredDate('');
-  }
+    setEnteredLocation("");
+    setEnteredLocationLink("");
+    setEnteredDairy("");
+    setEnteredDate("");
+  };
   return (
     <form onSubmit={submitHandler}>
-      <div className="new-view__controls">
-        <div className="new-view__control">
+      <div
+        className={`${styles["new-view__controls"]} ${
+          !isValid && styles.invalid
+        }`}
+      >
+        <div className={`${styles["new-view__control"]}`}>
           <label>Location</label>
           <input
             type="text"
@@ -45,7 +70,7 @@ const ViewForm = (props) => {
             onChange={locationChangeHandler}
           />
         </div>
-        <div className="new-view__control">
+        <div className={`${styles["new-view__control"]}`}>
           <label>LocationLink</label>
           <input
             type="text"
@@ -53,7 +78,7 @@ const ViewForm = (props) => {
             onChange={locationLinkChangeHandler}
           />
         </div>
-        <div className="new-view__control">
+        <div className={`${styles["new-view__control"]}`}>
           <label>Dairy</label>
           <input
             type="text"
@@ -61,7 +86,7 @@ const ViewForm = (props) => {
             onChange={dairyChangeHandler}
           />
         </div>
-        <div className="new-view__control">
+        <div className={`${styles["new-view__control"]}`}>
           <label>Date</label>
           <input
             type="date"
@@ -73,7 +98,9 @@ const ViewForm = (props) => {
         </div>
       </div>
       <div className="new-view__actions">
-        <button type="button" onClick={props.onCancel}>Cancel</button>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Experience</button>
       </div>
     </form>
