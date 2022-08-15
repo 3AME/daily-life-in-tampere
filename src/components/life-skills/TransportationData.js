@@ -4,6 +4,7 @@ import ImgCityBike from "../../assets/images/Transportation/CityBike.jpg";
 
 const Transpotation = [
   {
+    id:"T1",
     Title: "Bus",
     Img:ImgBus,
     Info:"https://www.nysse.fi/en/tickets-and-fares/season-ticket.html",
@@ -11,6 +12,7 @@ const Transpotation = [
     Disadvantages:"Fewer trains at weekends, inaccurate evening times, strikes can affect operations.",
   },
   {
+    id:"T2",
     Title: "Tram",
     Img:ImgTram,
     Info:"https://www.nysse.fi/en/tickets-and-fares/season-ticket.html",
@@ -18,6 +20,7 @@ const Transpotation = [
     Disadvantages:"Fewer routs. Fewer trains at weekends, inaccurate evening times, strikes can affect operations.",
   },
   {
+    id:"T3",
     Title: "City-bike",
     Img:ImgCityBike,
     Info:"https://pirkanmaanosuuskauppa.fi/salepyora/",

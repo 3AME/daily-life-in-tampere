@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 60vh;
   padding-top: 7rem;
   overflow: hidden;
 }
@@ -14,7 +14,7 @@ header {
 .tampere {
   background: linear-gradient(var(--color-primary), transparent);
   width: 22rem;
-  height: 30rem;
+  height: 20rem;
   position: absolute;
   left: calc(50% - 11rem);
   margin-top: 0rem;

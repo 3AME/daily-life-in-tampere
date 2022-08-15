@@ -1,7 +1,7 @@
 import React from 'react'
-import './view.css'
-import viewList from './viewList'
-import viewNotes from './viewNotes'
+import './view.css';
+import ViewList from './ViewList.js';
+import originViewsData from './ViewData.js'
 
 const View = () => {
   return (
@@ -10,8 +10,7 @@ const View = () => {
       <h2>Places can be visited</h2>
 
       <div className="container view__container">
-        {/* <viewList />
-        <viewNotes /> */}
+      <ViewList items ={originViewsData}/>
       </div>
     </section>
   )

@@ -25,9 +25,9 @@ function LifeSkills() {
     <div>
       <h3 style={{ textAlign: "center" }}>SupurMarket</h3>
       <div className="container supermarket__container">
-        {SuperMarketData.map(({ Title, Img, location, Features, Discount }) => {
+        {SuperMarketData.map(({ id,Title, Img, location, Features, Discount }) => {
           return (
-            <Card className={classes.root}>
+            <Card className={classes.root} key={id}>
               <CardHeader title={Title}></CardHeader>
               <CardMedia className={classes.media} image={Img}></CardMedia>
 
@@ -49,9 +49,9 @@ function LifeSkills() {
       </div>
       <h3 style={{ textAlign: "center" }}>Transpotation</h3>
       <div className="container supermarket__container">
-        {TranspotationData.map(({ Title, Img, Info, Advantages, Disadvantages }) => {
+        {TranspotationData.map(({ id,Title, Img, Info, Advantages, Disadvantages }) => {
           return (
-            <Card className={classes.root}>
+            <Card className={classes.root} key={id}>
               <CardHeader title={Title}></CardHeader>
               <CardMedia className={classes.media} image={Img}></CardMedia>
 

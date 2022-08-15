@@ -7,6 +7,7 @@ import imgTokmanni from "../../assets/images/SupurMarket/Tokmanni.png";
 
 const SuperMarketData = [
     {
+        id:"s1",
         Title: "Lidl",
         Img: imgLidl,
         location: "https://www.google.com/maps/search/lidl/@61.4902072,23.8300228,14z/data=!3m1!4b1",
@@ -14,6 +15,7 @@ const SuperMarketData = [
         Discount: "Check bonus information in an app called 'Lidl plus'.",
     },
     {
+        id:"s2",
         Title: "Sale",
         Img: imgSale,
         location: "https://www.google.com/maps/search/sale/@61.4901882,23.7774931,12z/data=!3m1!4b1",
@@ -21,6 +23,7 @@ const SuperMarketData = [
         Discount: "Checkout after 9pm and take products with the '-30%' label.",
     },
     {
+        id:"s3",
         Title: "Prisma",
         Img: imgPrisma,
         location: "https://www.google.com/maps/search/lidl/@61.4902072,23.8300228,14z/data=!3m1!4b1",
@@ -28,6 +31,7 @@ const SuperMarketData = [
         Discount: "You can get points on your S Bank card, 100 points for 1 Euro.",
     },
     {
+        id:"s4",
         Title: "K-citymarket",
         Img: imgKCity,
         location: "https://www.google.com/maps/search/k-citymarket/@61.4901523,23.777493,12z/data=!3m1!4b1",
@@ -35,6 +39,7 @@ const SuperMarketData = [
         Discount: "You can get points on your K membership card, 70 euros for 2.45.(Just for student membership card)",
     },
     {
+        id:"s5",
         Title: "K-Supermarket",
         Img: imgKSuper,
         location: "https://www.google.com/maps/search/K-Supermarket/@61.4901163,23.7774929,12z/data=!3m1!4b1",
@@ -42,6 +47,7 @@ const SuperMarketData = [
         Discount: "You can get points on your K membership card, 70 euros for 2.45.(Just for student membership card)",
     },
     {
+        id:"s6",
         Title: "Tokmanni",
         Img: imgTokmanni,
         location: "https://www.google.com/maps/search/tokmanni/@61.4900804,23.7774928,12z/data=!3m1!4b1",
