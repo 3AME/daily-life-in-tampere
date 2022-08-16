@@ -15,7 +15,7 @@ const ViewItem = (props) => {
             {/* <h2>{props.title}</h2> */}
             <h2><Link href={props.link}>{props.location}</Link></h2>
             <div className="view-item__dairy">{props.diary}</div>
-            <div><img src={props.img} alt=""></img></div>
+            <div className="view-item__img"><img src={props.img} alt="" ></img></div>
         </div>
       </Card>
     </li>

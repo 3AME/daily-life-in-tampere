@@ -45,7 +45,10 @@
   }
 
   .view-item__img {
-    height: 10px,
+    height: auto;
+    /* width: 20rem; */
+    /* max-width: 20rem; */
+    object-fit:cover,
   }
   
   @media (min-width: 580px) {
