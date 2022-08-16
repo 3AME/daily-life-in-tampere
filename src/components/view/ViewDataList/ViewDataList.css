@@ -1,0 +1,28 @@
+.view-data__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin:0 auto;
+    margin-bottom: 1rem
+}
+.view-data-list {
+    padding: 1rem;
+    background-color: rgb(240, 157, 157);
+    margin: 2rem auto;
+    width: 72rem;
+    border-radius: 12px;
+    max-width: 95%;
+    display: block;
+  }
+  
+
+  .view-data-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    width: 70rem;
+  }
