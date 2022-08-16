@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
     width: 350,
     height: 510,
     marginTop: "2rem",
+    borderRadius:"16px",
+    color:"#fffff",
   },
   media: {
     height: 0,
@@ -27,7 +29,7 @@ function LifeSkills() {
       <div className="container supermarket__container">
         {SuperMarketData.map(({ id,Title, Img, location, Features, Discount }) => {
           return (
-            <Card className={classes.root} key={id}>
+            <Card className={classes.root} key={id} >
               <CardHeader title={Title}></CardHeader>
               <CardMedia className={classes.media} image={Img}></CardMedia>
 

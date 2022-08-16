@@ -16,6 +16,7 @@
     flex-flow: column-reverse;
     justify-content: flex-start;
     flex: 1;
+    margin-left: 1rem;
   }
   
   .thought-item h2 {
