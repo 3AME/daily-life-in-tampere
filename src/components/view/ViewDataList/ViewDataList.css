@@ -6,6 +6,11 @@
     margin:0 auto;
     margin-bottom: 1rem
 }
+
+.view-data-list.css-1yjo05o {
+    display: block;
+}
+
 .view-data-list {
     padding: 1rem;
     background-color: rgb(240, 157, 157);

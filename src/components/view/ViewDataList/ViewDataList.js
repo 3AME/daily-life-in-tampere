@@ -11,7 +11,7 @@ import "./ViewDataList.css";
 
 const ViewDataList = () => {
   return (
-    <Stack direction="row" spacing={1} className="view-data-list">
+    <Stack direction="row" spacing={1} className="view-data-list css-1yjo05o">
       <div className="view-data__title">
         <h3>Featured Places:</h3>Click them which will bring you to the map
       </div>
