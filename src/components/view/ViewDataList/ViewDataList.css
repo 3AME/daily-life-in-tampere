@@ -1,33 +1,46 @@
 .view-data__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    margin:0 auto;
-    margin-bottom: 1rem
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .view-data-list.css-1yjo05o {
-    display: block;
+  display: block;
 }
 
 .view-data-list {
-    padding: 1rem;
-    background-color: rgb(240, 157, 157);
-    margin: 2rem auto;
-    width: 72rem;
-    border-radius: 12px;
-    max-width: 95%;
-    display: block;
+  padding: 1rem;
+  background-color: rgb(240, 157, 157);
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 95%;
+}
+
+.view-data-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  max-width: 95%;
+  /* width: 70rem; */
+}
+
+/* No idea how to make it responsive */
+@media screen and (min-width: 900px) {
+  .view-data-list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
   }
-  
 
   .view-data-item {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    width: 70rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
   }
+}

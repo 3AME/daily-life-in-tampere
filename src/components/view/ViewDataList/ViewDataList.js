@@ -15,18 +15,21 @@ const ViewDataList = () => {
       <div className="view-data__title">
         <h3>Featured Places:</h3>Click them which will bring you to the map
       </div>
-      <div className="view-data-item">
-        {Museums.map((museum) => (
-          <Chip
-            key={museum.id}
-            icon={<MuseumIcon />}
-            label={museum.location}
-            component="a"
-            href={museum.locationLink}
-            clickable
-          />
-        ))}
-      </div>
+      {/* <div className=""> */}
+        <div className="view-data-item">
+          {Museums.map((museum) => (
+            <Chip
+              key={museum.id}
+              icon={<MuseumIcon />}
+              label={museum.location}
+              component="a"
+              href={museum.locationLink}
+              clickable
+            />
+          ))}
+        </div>
+      {/* </div> */}
+
       <div className="view-data-item">
         {Lakes.map((lake) => (
           <Chip

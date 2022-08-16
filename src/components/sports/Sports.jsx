@@ -1,12 +1,11 @@
 import React from "react";
-import { Card, CardHeader, CardMedia, CardContent,Link } from "@mui/material";
+import { Card, CardHeader, CardMedia, CardContent, Link } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
-import ImgBadminton from "../../assets/images/badminton.jpg";
-import ImgGroupExercise from "../../assets/images/groupexercise.jpg";
-import ImgGym from "../../assets/images/gym.jpg";
 import { GoLocation } from "react-icons/go";
 import Box from "@mui/material/Box";
 import Typography from "@material-ui/core/Typography";
+import SportsData from "./SportsData";
+import SportLocationData from "./SportLocationData";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,21 +31,14 @@ function Sports() {
           textAlign: "center",
         }}
       >
-        <Card className={classes.root}>
-          <CardMedia className={classes.media} image={ImgBadminton}></CardMedia>
-          <CardHeader title="Badminton"></CardHeader>
-        </Card>
-        <Card className={classes.root}>
-          <CardMedia
-            className={classes.media}
-            image={ImgGroupExercise}
-          ></CardMedia>
-          <CardHeader title="Group exercise"></CardHeader>
-        </Card>
-        <Card className={classes.root}>
-          <CardMedia className={classes.media} image={ImgGym}></CardMedia>
-          <CardHeader title="Gym"></CardHeader>
-        </Card>
+        {SportsData.map(({ id, title, img }) => {
+          return (
+            <Card className={classes.root} key={id}>
+              <CardMedia className={classes.media} image={img}></CardMedia>
+              <CardHeader title={title}></CardHeader>
+            </Card>
+          );
+        })}
       </div>
       <div
         style={{
@@ -63,40 +55,36 @@ function Sports() {
           }}
         >
           <GoLocation />
-          <Link
-            href="https://goo.gl/maps/Duemzr8Vu21FsQfF7"
-            variant="body2"
-            style={{ color: "white" }}
-          >
-            City center(Atalpa)
-          </Link>
-          <Link
-            href="https://goo.gl/maps/umhxQhmsqaHXzG6A9"
-            variant="body2"
-            style={{ color: "white" }}
-          >
-            Hervanta(Tamppi Areena)
-          </Link>
-          <Link
-            href="https://goo.gl/maps/FQnLXqNZFMdtrGWw7"
-            variant="body2"
-            style={{ color: "white" }}
-          >
-            Kauppi(L-building)
-          </Link>
+          {SportLocationData.map(({id, locationName, locationLink}) => {
+            return (
+              <Link
+                href={locationLink}
+                variant="body2"
+                style={{ color: "white" }}
+                key={id}
+              >
+              {locationName}
+              </Link>
+            );
+          })}
         </Box>
       </div>
-      <div style={{
-        display:"flex",
-        justifyContent:"center",
-        marginTop: "2rem",
-      }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "2rem",
+        }}
+      >
         <Card className={classes.root}>
           <CardHeader title="Tips!!!"></CardHeader>
           <CardContent>
-            <Typography paragraph>Group exercise can be booked the day before event. 😇 
+            <Typography paragraph>
+              Group exercise can be booked the day before event. 😇
             </Typography>
-            <Link href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/">SportUni Time Selection</Link>
+            <Link href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/">
+              SportUni Time Selection
+            </Link>
           </CardContent>
         </Card>
       </div>

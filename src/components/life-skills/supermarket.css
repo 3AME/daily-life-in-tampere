@@ -6,4 +6,21 @@
   justify-content: space-around;
   margin: auto;
   margin-bottom: 2rem;
+  /*   display: "flex",
+          justifyContent: "space-around",
+          textAlign: "center", */
+}
+
+@media screen and (max-width: 1024px) {
+  .supermarket__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .supermarket__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
