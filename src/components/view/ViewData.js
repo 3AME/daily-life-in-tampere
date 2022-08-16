@@ -10,7 +10,7 @@ const originViewsData = [
         location:"Suomenlinna",
         locationLink:"https://g.page/suomenlinnaofficial?share",
         diary:"Suomenlinna is a island with artillery, tunnels, dockyards, museums and breweries. I visited the toy museum, which includes many toys from different period. This island is bigger than my mind, if you want to visit all museums and all recommended places then you should prepare enough food and energy.",
-        img:{img1},
+        img:img1,
         date: new Date(2022,5,20), 
     },
     {
@@ -20,7 +20,7 @@ const originViewsData = [
         location:"Museokeskus Vapriikki",
         locationLink:"https://goo.gl/maps/cdBNzpaGcrQCiZBT8",
         diary:"This museum is amazing, because there are many differnt fileds includes minerals, animals, games. My favorite thing is play video games in the museum even though they just some demo games, but you have experience for them.",
-        img:{img2},
+        img:img2,
         date: new Date(2022,7,20), 
     },
     {
@@ -29,7 +29,7 @@ const originViewsData = [
         location:"Amurin Museokortteli",
         locationLink:"https://goo.gl/maps/RdTLELVuPmPJpX5FA",
         diary:"We visit this museum in a cloudy day, but we are tired and enjoy the process. We saw people's home in different period, some of them are rich, somes are ordinary who lived with other families. ",
-        img:{img3},
+        img:img3,
         date: new Date(2022,6,20), 
     },
     {
@@ -38,7 +38,7 @@ const originViewsData = [
         location:"Rauhaniemi Folk Spa",
         locationLink:"https://goo.gl/maps/iBbNbC5uCcftXcX69",
         diary:"It is a sunny Sunday, we went to the lake and played in the lake. Finland's summer is short and lower temparatures than China, I felt cold when I enter to the lake, but the sun was nice at that day.",
-        img:{img4},
+        img:img4,
         date: new Date(2022,4,23), 
     },
 ]
