@@ -2,7 +2,7 @@ import ImgBus from "../../assets/images/Transportation/Bus.jpg";
 import ImgTram from "../../assets/images/Transportation/Tram.jpg";
 import ImgCityBike from "../../assets/images/Transportation/CityBike.jpg";
 
-const Transpotation = [
+const TrafficData = [
   {
     id:"T1",
     Title: "Bus",
@@ -29,4 +29,4 @@ const Transpotation = [
   },
 ]
 
-export default Transpotation;
+export default TrafficData;

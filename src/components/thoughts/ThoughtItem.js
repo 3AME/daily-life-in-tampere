@@ -7,10 +7,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ThoughtItem = (props) => {
-  //   console.log(props);
+  // console.log(props);
   const [liked, setLiked] = useState(null);
   const deleteHandler = () => {
-    props.onDelete(props.id);
+    props.onDelete(props.id);//Get thoughtItem's id
+    // console.log(props.id);
   };
   const likeHandler = () => {
     setLiked(!liked);
@@ -19,10 +20,12 @@ const ThoughtItem = (props) => {
     <li>
       <Card className="thought-item">
         <TipsAndUpdatesIcon />
-        <div className="thought-item__description">{props.content}</div>
+        <div className="thought-item__description" key={props.id}>
+          {props.content}
+        </div>
         <button className="thought-item__button" onClick={deleteHandler}>
           <DeleteOutlineIcon className="thought-item__delete" />
-        </button> 
+        </button>
         <div>
           {liked ? (
             <button className="thought-item__button" onClick={likeHandler}>
