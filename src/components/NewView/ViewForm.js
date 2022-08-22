@@ -6,6 +6,7 @@ const ViewForm = (props) => {
   const [enteredLocationLink, setEnteredLocationLink] = useState("");
   const [enteredDairy, setEnteredDairy] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [enteredImg, setEnteredImg] = useState("");
   const [isValid, setIsValid] = useState(true);
   const locationChangeHandler = (event) => {
     if (event.target.value.trim().length > 0) {
@@ -31,13 +32,20 @@ const ViewForm = (props) => {
     }
     setEnteredDate(event.target.value);
   };
+  const imgChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
+    setEnteredImg(event.target.value);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
     if (
       enteredLocation.trim().length === 0 ||
       enteredLocationLink.trim().length === 0 ||
       enteredDairy.trim().length === 0 ||
-      enteredDate.trim().length === 0
+      enteredDate.trim().length === 0 ||
+      enteredImg.trim().length === 0
     ) {
       setIsValid(false);
       return;
@@ -47,13 +55,16 @@ const ViewForm = (props) => {
       locationLink: enteredLocationLink,
       diary: enteredDairy,
       date: new Date(enteredDate),
+      img: enteredImg,
     };
 
     props.onSaveViewData(viewData);
+    // console.log(viewData);
     setEnteredLocation("");
     setEnteredLocationLink("");
     setEnteredDairy("");
     setEnteredDate("");
+    setEnteredImg("");
   };
   return (
     <form onSubmit={submitHandler}>
@@ -95,6 +106,17 @@ const ViewForm = (props) => {
             value={enteredDate}
             onChange={dateChangeHandler}
           />
+        </div>
+        <div className={`${styles["new-view__control"]}`}>
+          <label htmlFor="img">Select Image</label>
+          <input
+            type="file"
+            id="img"
+            accept="image/*"
+            alt=""
+            value={enteredImg}
+            onChange={imgChangeHandler}
+          ></input>
         </div>
       </div>
       <div className="new-view__actions">

@@ -6,10 +6,10 @@ import Box from "@mui/material/Box";
 import Typography from "@material-ui/core/Typography";
 import SportsData from "./SportsData";
 import SportLocationData from "./SportLocationData";
+import {createTheme} from "@mui/material/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // maxWidth: 1000,
     width: 300,
     height: 250,
   },
@@ -18,10 +18,19 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "56.25%", // 16:9
   },
 }));
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      '"Poppins"',
+      'sans-serif',
+    ].join(','),
+  },
+});
+
 function Sports() {
   const classes = useStyles();
   return (
-    <section id="sports">
+    <section id="sports" className="sports">
       <h5>What</h5>
       <h2>Sports I will do?</h2>
       <div
@@ -29,13 +38,14 @@ function Sports() {
           display: "flex",
           justifyContent: "space-around",
           textAlign: "center",
+          fontFamily:"Poppins"
         }}
       >
         {SportsData.map(({ id, title, img }) => {
           return (
-            <Card className={classes.root} key={id}>
+            <Card className={classes.root} key={id} style={{backgroundColor:"#eec6c6", color:"#40005d"}}>
               <CardMedia className={classes.media} image={img}></CardMedia>
-              <CardHeader title={title}></CardHeader>
+              <CardHeader title={title} className="font_style"></CardHeader>
             </Card>
           );
         })}
@@ -50,7 +60,7 @@ function Sports() {
       >
         <Box
           sx={{
-            typography: "body1",
+            typography: {theme},
             "& > :not(style) + :not(style)": { ml: 10 },
           }}
         >
@@ -60,7 +70,7 @@ function Sports() {
               <Link
                 href={locationLink}
                 variant="body2"
-                style={{ color: "white" }}
+                style={{ color: "white", fontFamily:"Poppins"}}
                 key={id}
               >
               {locationName}
@@ -74,15 +84,16 @@ function Sports() {
           display: "flex",
           justifyContent: "center",
           marginTop: "2rem",
+          fontFamily:"Poppins"
         }}
       >
-        <Card className={classes.root}>
-          <CardHeader title="Tips!!!"></CardHeader>
+        <Card className={classes.root} style={{backgroundColor:"#eec6c6", color:"#40005d"}}>
+          <CardHeader title="Tips!!!" style={{fontFamily:"Poppins"}}></CardHeader>
           <CardContent>
-            <Typography paragraph>
+            <Typography paragraph style={{fontFamily:"Poppins"}}>
               Group exercise can be booked the day before event. 😇
             </Typography>
-            <Link href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/">
+            <Link href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/" style={{fontFamily:"Poppins"}}>
               SportUni Time Selection
             </Link>
           </CardContent>

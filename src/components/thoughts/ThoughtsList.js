@@ -8,7 +8,7 @@ const ThoughtsList = (props) => {
     <ul className="thoughts-list">
       {props.items.map((thought) => (
         
-        <ThoughtItem key={thought.id} content={thought.thoughtContent} />
+        <ThoughtItem key={thought.id} content={thought.thoughtContent} onDelete={props.onDeleteItem}/>
       ))}
     </ul>
   );

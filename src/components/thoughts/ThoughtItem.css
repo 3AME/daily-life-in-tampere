@@ -5,7 +5,8 @@
     padding: 0.5rem;
     margin: 1rem 0;
     border-radius: 12px;
-    background-color: #de9696;
+    background-color: #EEC6C6;
+    color: #40005d;
   }
   
   .thought-item__description {
@@ -36,7 +37,22 @@
     padding: 0.5rem;
     border-radius: 12px;
   }
-  
+  .thought-item__button {
+    font: inherit;
+    cursor: pointer;
+    /* padding: 1rem 2rem; */
+    /* border: 1px solid #40005d; */
+    background-color: #EEC6C6;
+    color: white;
+    border-radius: 16px;
+    margin-right: 1rem;
+    display: flex;
+  }
+  .thought-item__delete{
+    color: #40005d;
+    
+  }
+
   @media (min-width: 580px) {
     .thought-item__description {
       flex-direction: row;

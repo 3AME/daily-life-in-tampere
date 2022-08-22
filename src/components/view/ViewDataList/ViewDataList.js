@@ -11,48 +11,55 @@ import "./ViewDataList.css";
 
 const ViewDataList = () => {
   return (
-    <Stack direction="row" spacing={1} className="view-data-list css-1yjo05o">
-      <div className="view-data__title">
-        <h3>Featured Places:</h3>Click them which will bring you to the map
-      </div>
-      {/* <div className=""> */}
-        <div className="view-data-item">
-          {Museums.map((museum) => (
-            <Chip
-              key={museum.id}
-              icon={<MuseumIcon />}
-              label={museum.location}
-              component="a"
-              href={museum.locationLink}
-              clickable
-            />
-          ))}
+    <Stack direction="row" spacing={2}>
+      <div className="view-data-list css-1yjo05o">
+        <div className=" view-data__title">
+          <h2>Featured Places </h2>
+          <h5> Click them which will bring you to the map</h5>
         </div>
-      {/* </div> */}
+        <div className="view-data__items">
+          <div className="view-data-item">
+            {Museums.map((museum) => (
+              <Chip
+                key={museum.id}
+                icon={<MuseumIcon />}
+                label={museum.location}
+                component="a"
+                href={museum.locationLink}
+                clickable
+                style={{margin:"0.3rem", fontFamily:'Poppins'}}
+                className="MuiChip-label"
+              />
+            ))}
+          </div>
 
-      <div className="view-data-item">
-        {Lakes.map((lake) => (
-          <Chip
-            key={lake.id}
-            icon={<ForestIcon />}
-            label={lake.location}
-            component="a"
-            href={lake.locationLink}
-            clickable
-          />
-        ))}
-      </div>
-      <div className="view-data-item">
-        {Forests.map((forest) => (
-          <Chip
-            key={forest.id}
-            icon={<WaterIcon />}
-            label={forest.location}
-            component="a"
-            href={forest.locationLink}
-            clickable
-          />
-        ))}
+          <div className="view-data-item">
+            {Lakes.map((lake) => (
+              <Chip
+                key={lake.id}
+                icon={<ForestIcon />}
+                label={lake.location}
+                component="a"
+                href={lake.locationLink}
+                clickable
+                style={{margin:"0.3rem"}}
+              />
+            ))}
+          </div>
+          <div className="view-data-item">
+            {Forests.map((forest) => (
+              <Chip
+                key={forest.id}
+                icon={<WaterIcon />}
+                label={forest.location}
+                component="a"
+                href={forest.locationLink}
+                clickable
+                style={{margin:"0.3rem"}}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </Stack>
   );

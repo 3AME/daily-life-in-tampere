@@ -10,6 +10,7 @@ const NewView = (props) => {
         id: Math.random().toString(),
     }
     props.onAddView(viewData);
+    // console.log(viewData);
     setIsEditing(false);
    }
    const startEditingHandler = () =>{

@@ -33,8 +33,23 @@ const Thoughts = () => {
   const [thoughts, setThoughts] = useState(DUMMY_Thoughts);
   const addThoughtHandler = (thought) =>{
     setThoughts((prevThoughts)=>{
-      return [thought, ...prevThoughts];
+     const updateThoughts = [thought, ...prevThoughts];
+      return updateThoughts;
     })
+  }
+  const deleteItemHandler = thoughtId =>{
+    /* setThoughts(prevThoughts = {
+      // const updateThoughts = [...prevThoughts];
+      // updateThoughts : prevThoughts.filter(thought => thought.id !== thoughtId)
+    });
+    let content = (
+      <p style={{textAlign:'center'}}>No thought founded. Maybe add one?</p>
+    );
+    if(thoughts.length >0){
+      content = (
+        <ThoughtsList items={thoughts} onDeleteItem ={deleteItemHandler}/>
+      )
+    } */
   }
   return (
     <section id="thoughts">
@@ -42,7 +57,8 @@ const Thoughts = () => {
       <h2>My thoughts</h2>
       <NewThought onAddThought={addThoughtHandler}/>
       <Card className="thoughts">
-        <ThoughtsList items={thoughts}/>
+        {/* {content} */}
+        <ThoughtsList items={thoughts} onDeleteItem ={deleteItemHandler}/>
       </Card>
     </section>
   );

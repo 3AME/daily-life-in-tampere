@@ -29,21 +29,21 @@ function LifeSkills() {
       <div className="container supermarket__container">
         {SuperMarketData.map(({ id,Title, Img, location, Features, Discount }) => {
           return (
-            <Card className={classes.root} key={id} >
-              <CardHeader title={Title}></CardHeader>
+            <Card className={classes.root} key={id} style={{backgroundColor:"#eec6c6", color:"#40005d",fontFamily:"Poppins"}}>
+              <CardHeader title={Title} style={{fontFamily:"Poppins"}}></CardHeader>
               <CardMedia className={classes.media} image={Img}></CardMedia>
 
               <CardContent>
                 <Typography>
                   Location:
-                  <Link href={location}>Search '{Title}' in Google map</Link>
+                  <Link href={location} style={{fontFamily:"Poppins"}}>Search '{Title}' in Google map</Link>
                 </Typography>
               </CardContent>
               <CardContent>
-                <Typography>Features:{Features}</Typography>
+                <Typography style={{fontFamily:"Poppins"}}>Features:{Features}</Typography>
               </CardContent>
               <CardContent>
-                <Typography>Discount:{Discount}</Typography>
+                <Typography style={{fontFamily:"Poppins"}}>Discount:{Discount}</Typography>
               </CardContent>
             </Card>
           );
@@ -53,21 +53,21 @@ function LifeSkills() {
       <div className="container supermarket__container">
         {TranspotationData.map(({ id,Title, Img, Info, Advantages, Disadvantages }) => {
           return (
-            <Card className={classes.root} key={id}>
-              <CardHeader title={Title}></CardHeader>
+            <Card className={classes.root} key={id} style={{backgroundColor:"#eec6c6", color:"#40005d",fontFamily:"Poppins"}}>
+              <CardHeader title={Title} style={{fontFamily:"Poppins"}}></CardHeader>
               <CardMedia className={classes.media} image={Img}></CardMedia>
 
               <CardContent>
-                <Typography>
+                <Typography style={{fontFamily:"Poppins"}}>
                   Information:
-                  <Link href={Info}>Click me!</Link>
+                  <Link href={Info} style={{fontFamily:"Poppins"}}>Click me!</Link>
                 </Typography>
               </CardContent>
               <CardContent>
-                <Typography>Advantages:{Advantages}</Typography>
+                <Typography style={{fontFamily:"Poppins"}}>Advantages:{Advantages}</Typography>
               </CardContent>
               <CardContent>
-                <Typography>Disadvantages:{Disadvantages}</Typography>
+                <Typography style={{fontFamily:"Poppins"}}>Disadvantages:{Disadvantages}</Typography>
               </CardContent>
             </Card>
           );

@@ -6,15 +6,13 @@ import Card from '../UI/Card.js'
 
 
 const ViewItem = (props) => {
-    // alert(props.img);
   return (
     <li>
       <Card className="view-item">
         <ViewDate date={props.date}/>
         <div className="view-item__description">
-            {/* <h2>{props.title}</h2> */}
-            <h2><Link href={props.link}>{props.location}</Link></h2>
-            <div className="view-item__dairy">{props.diary}</div>
+            <h2><Link href={props.link} color="#40005d">{props.location}</Link></h2>
+            <div className="view-item__diary">{props.diary}</div>
             <div className="view-item__img"><img src={props.img} alt="" ></img></div>
         </div>
       </Card>

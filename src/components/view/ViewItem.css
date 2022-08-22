@@ -6,6 +6,7 @@
     margin: 1rem 0;
     border-radius: 12px;
     background-color: #eec6c6;
+    font-family: 'Poppins', sans-serif;
   }
   
   .view-item__description {
@@ -16,6 +17,7 @@
     flex-flow: column-reverse;
     justify-content: flex-start;
     flex: 1;
+    font-family: 'Poppins', sans-serif;
   }
   
   .view-item h2 {
@@ -37,17 +39,14 @@
   .view-item__diary {
     font-size: 0.8rem;
     font-weight: bold;
-    color: white;
-    background-color: #40005d;
-    border: 1px solid white;
+    color: black;
     padding: 0.2rem;
+    font-family: 'Poppins', sans-serif;
     border-radius: 12px;
   }
 
   .view-item__img {
     height: auto;
-    /* width: 20rem; */
-    /* max-width: 20rem; */
     object-fit:cover,
   }
   
