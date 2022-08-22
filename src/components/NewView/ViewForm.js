@@ -36,6 +36,16 @@ const ViewForm = (props) => {
     if (event.target.value.trim().length > 0) {
       setIsValid(true);
     }
+    let imgfile = event.target.files[0]; //Acquire the first image from input
+    console.log('I am the origin picture', imgfile);
+    let reader = new FileReader(); //Using readAsDataURL for image return
+    // reader.readAsDataURL(imgfile);
+    console.log(reader.readAsDataURL(imgfile));
+  /*   reader.onload = function (event){
+      let imgs = event.result;
+      console.log("I am the picture returned as Base64",imgs);
+      setEnteredImg(imgs);
+    } */
     setEnteredImg(event.target.value);
   };
   const submitHandler = (event) => {
