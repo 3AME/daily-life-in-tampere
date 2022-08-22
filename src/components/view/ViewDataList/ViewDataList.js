@@ -22,7 +22,7 @@ const ViewDataList = () => {
             {Museums.map((museum) => (
               <Chip
                 key={museum.id}
-                icon={<MuseumIcon />}
+                icon={<MuseumIcon style={{color:"#40005d"}}/>}
                 label={museum.location}
                 component="a"
                 href={museum.locationLink}
@@ -37,7 +37,7 @@ const ViewDataList = () => {
             {Lakes.map((lake) => (
               <Chip
                 key={lake.id}
-                icon={<ForestIcon />}
+                icon={<ForestIcon style={{color:"#40005d"}}/>}
                 label={lake.location}
                 component="a"
                 href={lake.locationLink}
@@ -50,7 +50,7 @@ const ViewDataList = () => {
             {Forests.map((forest) => (
               <Chip
                 key={forest.id}
-                icon={<WaterIcon />}
+                icon={<WaterIcon style={{color:"#40005d"}}/>}
                 label={forest.location}
                 component="a"
                 href={forest.locationLink}
