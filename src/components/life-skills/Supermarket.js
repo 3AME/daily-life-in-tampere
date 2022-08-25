@@ -4,7 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import SuperMarketData from "./SupurMarketData";
 import "./supermarket.css";
-
+/** This component will import SuperMarketData from SuperMarketData.js, and used map to show supermarket data one by one.  Use the Card in the material ui to display data. 
+ * 
+*/
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: 1000,

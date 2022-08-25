@@ -1,6 +1,9 @@
 import React from "react";
 import "./footer.css";
 
+/**
+ * Here is a footer for this application. Present all links to parts of this application and claim the rights.
+ */
 const Footer = () => {
   return (
     <footer>

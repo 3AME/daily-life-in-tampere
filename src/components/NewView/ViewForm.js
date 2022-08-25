@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import styles from "./ViewForm.module.css";
+/**
+ *  ViewForm.js
+ *  This component is a form for adding new visit experience. 
+ *  The form contains location input, localtion link input, date input, Dairy input, images input, and button for cancel or add. 
 
+ */
 const ViewForm = (props) => {
   const [enteredLocation, setEnteredLocation] = useState("");
   const [enteredLocationLink, setEnteredLocationLink] = useState("");
@@ -8,6 +13,7 @@ const ViewForm = (props) => {
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredImg, setEnteredImg] = useState("");
   const [isValid, setIsValid] = useState(true);
+  /**If the input is empty then steIsvalid to ture, if not, setEnteredxxx as the input value. locationChangeHandler, locationLinkChangeHandler, dairyChangeHandler,  dateChangeHandler, imgChangeHandler have the same logic.*/
   const locationChangeHandler = (event) => {
     if (event.target.value.trim().length > 0) {
       setIsValid(true);
@@ -37,17 +43,18 @@ const ViewForm = (props) => {
       setIsValid(true);
     }
     let imgfile = event.target.files[0]; //Acquire the first image from input
-    console.log('I am the origin picture', imgfile);
+    console.log("I am the origin picture", imgfile);
     let reader = new FileReader(); //Using readAsDataURL for image return
     // reader.readAsDataURL(imgfile);
     console.log(reader.readAsDataURL(imgfile));
-  /*   reader.onload = function (event){
+    /*   reader.onload = function (event){
       let imgs = event.result;
       console.log("I am the picture returned as Base64",imgs);
       setEnteredImg(imgs);
     } */
     setEnteredImg(event.target.value);
   };
+   /**When the form is submitted, if the enteredLocation value is empty or enteredLocationLink is empty or enteredDairy is empty or enteredDate is empty then return nothing and close the form. If all of them are ture then put them to the viewData. And call the onSaveViewData in the NewView component, then all entered value as empty. */
   const submitHandler = (event) => {
     event.preventDefault();
     if (

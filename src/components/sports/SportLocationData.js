@@ -1,3 +1,7 @@
+import React from 'react'
+/**
+ *  Data of sport location in Tampere.
+ */
 const SportLocationData = [
     {
         id:'sl1',

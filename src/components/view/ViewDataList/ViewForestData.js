@@ -1,3 +1,8 @@
+/**
+ *  ViewForestData.js
+ *  Data of forests. 
+
+ */
 const Forests = [
   {
     id: "f1",

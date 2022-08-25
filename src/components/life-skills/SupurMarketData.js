@@ -4,7 +4,10 @@ import imgPrisma from "../../assets/images/SupurMarket/Prisma.jpg";
 import imgKCity from "../../assets/images/SupurMarket/KCity.jpg";
 import imgKSuper from "../../assets/images/SupurMarket/KSuper.jpg";
 import imgTokmanni from "../../assets/images/SupurMarket/Tokmanni.png";
-
+/**
+ *  SuperMarketData.js
+ *  Data of supermarket in Tampere.
+ */
 const SuperMarketData = [
     {
         id:"s1",

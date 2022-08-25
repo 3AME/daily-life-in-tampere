@@ -4,7 +4,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import TrafficData from "./TrafficData";
 import "./supermarket.css";
-
+/**
+ *  Transportation.js---
+ *  This is transportation component.
+ *  It will import transportation data from TrafficData.js, and use map to present data one by one. Use the Card in the material ui to display data.
+ */
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: 1000,
@@ -26,27 +30,46 @@ const Transpotation = (props) => {
     <div>
       <h3 style={{ textAlign: "center" }}>Transpotation</h3>
       <div className="container supermarket__container">
-        {TrafficData.map(({ id,Title, Img, Info, Advantages, Disadvantages }) => {
-          return (
-            <Card className={classes.root} key={id} style={{backgroundColor:"#eec6c6", color:"#40005d",fontFamily:"Poppins"}}>
-              <CardHeader title={Title} style={{fontFamily:"Poppins"}}></CardHeader>
-              <CardMedia className={classes.media} image={Img}></CardMedia>
+        {TrafficData.map(
+          ({ id, Title, Img, Info, Advantages, Disadvantages }) => {
+            return (
+              <Card
+                className={classes.root}
+                key={id}
+                style={{
+                  backgroundColor: "#eec6c6",
+                  color: "#40005d",
+                  fontFamily: "Poppins",
+                }}
+              >
+                <CardHeader
+                  title={Title}
+                  style={{ fontFamily: "Poppins" }}
+                ></CardHeader>
+                <CardMedia className={classes.media} image={Img}></CardMedia>
 
-              <CardContent>
-                <Typography style={{fontFamily:"Poppins"}}>
-                  Information:
-                  <Link href={Info} style={{fontFamily:"Poppins"}}>Click me!</Link>
-                </Typography>
-              </CardContent>
-              <CardContent>
-                <Typography style={{fontFamily:"Poppins"}}>Advantages:{Advantages}</Typography>
-              </CardContent>
-              <CardContent>
-                <Typography style={{fontFamily:"Poppins"}}>Disadvantages:{Disadvantages}</Typography>
-              </CardContent>
-            </Card>
-          );
-        })}
+                <CardContent>
+                  <Typography style={{ fontFamily: "Poppins" }}>
+                    Information:
+                    <Link href={Info} style={{ fontFamily: "Poppins" }}>
+                      Click me!
+                    </Link>
+                  </Typography>
+                </CardContent>
+                <CardContent>
+                  <Typography style={{ fontFamily: "Poppins" }}>
+                    Advantages:{Advantages}
+                  </Typography>
+                </CardContent>
+                <CardContent>
+                  <Typography style={{ fontFamily: "Poppins" }}>
+                    Disadvantages:{Disadvantages}
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          }
+        )}
       </div>
     </div>
   );
