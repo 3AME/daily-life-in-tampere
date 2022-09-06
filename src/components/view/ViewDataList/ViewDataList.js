@@ -35,11 +35,11 @@ const StyledChip = withStyles({
       color:"#ffffff",
     },
   },
-  icon: {
-    "&&:hover": {
-      color: "#ffffff",
-    },
-  },
+  // icon: {
+  //   "&&:hover": {
+  //     color: "#ffffff",
+  //   },
+  // },
 })(Chip);
 const ViewDataList = () => {
   const classes = useStyles();

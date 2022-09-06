@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(0.5),
     },
     "&&:hover":{
-      backgroundColor:"#7d7dd7",
-      color:"#ffffff"
+      border: "5px solid #7D7DD7",
     }
   },
   media: {
@@ -31,16 +30,13 @@ const useStyles = makeStyles((theme) => ({
   styleLink: {
     color:"#7d7dd7", //Don't know why this doesn't work.
     "&&:hover":{
-      color:"#ffffff"
+      color:"#5555C0"
     }
   },
   typography: {
     fontFamily: "Poppins",
     color:"#4A4A4A",
     link:{color:"#5555C0"},
-    "&&:hover":{
-      color:"#ffffff"
-    }
   },
 }));
 
