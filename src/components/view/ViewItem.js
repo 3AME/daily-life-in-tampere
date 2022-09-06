@@ -17,7 +17,7 @@ const ViewItem = (props) => {
         <ViewDate date={props.date} />
         <div className="view-item__description">
           <h2>
-            <Link href={props.link} color="#4A4A4A">
+            <Link href={props.link} color="#ffffff">
               {props.location}
             </Link>
           </h2>

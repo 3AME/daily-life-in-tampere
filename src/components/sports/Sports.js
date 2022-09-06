@@ -93,7 +93,7 @@ function Sports() {
       >
         <Card
           className={classes.root}
-          style={{ backgroundColor: "#7D7DD7", color: "#ffffff" }}
+          style={{ backgroundColor: "#ffffff", color: "#4A4A4A" }}
         >
           <CardHeader
             title="Tips!!!"
@@ -105,7 +105,7 @@ function Sports() {
             </Typography>
             <Link
               href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/"
-              style={{ fontFamily: "Poppins", color:"#4A4A4A" }}
+              style={{ fontFamily: "Poppins", color:"#5555C0" }}
             >
               SportUni Time Selection
             </Link>
