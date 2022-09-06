@@ -5,7 +5,7 @@
     padding: 0.5rem;
     margin: 1rem 0;
     border-radius: 12px;
-    background-color: #eec6c6;
+    background-color: var(--color--primary);
     font-family: 'Poppins', sans-serif;
   }
   
@@ -39,7 +39,7 @@
   .view-item__diary {
     font-size: 0.8rem;
     font-weight: bold;
-    color: black;
+    color: var(--color-bg);
     padding: 0.2rem;
     font-family: 'Poppins', sans-serif;
     border-radius: 12px;
@@ -48,6 +48,10 @@
   .view-item__img {
     height: auto;
     object-fit:cover,
+  }
+
+  .view-item__link {
+    color:var(--color--bg);
   }
   
   @media (min-width: 580px) {

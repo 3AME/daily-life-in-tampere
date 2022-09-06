@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* import Google Fonts */
 
 * {
@@ -12,12 +12,19 @@
 }
 
 :root {
-  --color-bg:#7d7dd7;
+  /* --color-bg:#7d7dd7; */
+
   --color-bg-variant: #2c2c6c;
-  --color--primary: #4db5ff;
-  --color--primary-variant: rgba(255,255,255,0.4);
+
+  --color--primary-variant: rgba(255, 255, 255, 0.4);
   --color-white: #fff;
-  --color-light: rgba(255,255,255,0.6);
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --color-bg: #ffffff;
+  --color--primary: #7d7dd7;
+  --color--secondary: #5555c0;
+  --color-text: #4a4a4a;
+  --color-area: #7d7dd7;
 
   --transition: all 400ms ease;
 
@@ -35,9 +42,9 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text);
   line-height: 1.7;
   /* background-image: url(../src/assets/images/bg-texture.jpg); */
 }
@@ -48,7 +55,11 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 500;
 }
 
@@ -61,13 +72,14 @@ section {
   /* height: 100vh; */
 }
 
-section > h2, section > h5 {
+section > h2,
+section > h5 {
   text-align: center;
-  color: var(--color-light);
+  color: var(--color-text);
 }
 
 section > h2 {
-  color: var( --color-white);
+  color: var(--color-text);
   margin-bottom: 3rem;
 }
 
@@ -113,7 +125,7 @@ img {
 }
 
 /* ========== Medium queries(medium devices) ==========*/
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
@@ -124,7 +136,7 @@ img {
 }
 
 /* ========== Small queries(small devices) ==========*/
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }

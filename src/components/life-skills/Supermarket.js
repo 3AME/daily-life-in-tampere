@@ -35,8 +35,8 @@ const Supermarket = (props) => {
                 className={classes.root}
                 key={id}
                 style={{
-                  backgroundColor: "#eec6c6",
-                  color: "#40005d",
+                  backgroundColor: "#ffffff",
+                  color: "#4A4A4A",
                   fontFamily: "Poppins",
                 }}
               >
@@ -49,7 +49,7 @@ const Supermarket = (props) => {
                 <CardContent>
                   <Typography>
                     Location:
-                    <Link href={location} style={{ fontFamily: "Poppins" }}>
+                    <Link href={location} style={{ fontFamily: "Poppins", color:"#5555C0" }}>
                       Search '{Title}' in Google map
                     </Link>
                   </Typography>

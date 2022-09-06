@@ -6,7 +6,7 @@
   margin: 0 auto;
   margin-bottom: 1rem;
   flex-direction: column;
-  color: #40005d;
+  color: var(--color-bg);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -21,7 +21,7 @@
 
 .view-data-list {
   padding: 1rem;
-  background-color:#eec6c6;
+  background-color:var(--color--primary);
   margin: 2rem auto;
   border-radius: 20px;
   max-width: 95%;
@@ -31,7 +31,7 @@
 .view-data__items {
   display: flex;
   justify-content: space-around;
-  background-color: #a892ee;
+  background-color: #ffffff;
   border-radius: 12px;
   font-family: 'Poppins', sans-serif;
 }
@@ -50,6 +50,7 @@
   flex-direction: row;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
+  color: var(--color-text);
 }
 
 /* No idea how to make it responsive */

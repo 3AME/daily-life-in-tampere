@@ -6,24 +6,24 @@
     max-width: 95%;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); */
   }
   
   .new-thought button {
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
+    border: 3px solid var(--color--primary);
+    background-color: var(--color-bg);
+    color: var(--color--secondary);
     border-radius: 12px;
     margin-right: 1rem;
   }
   
   .new-thought button:hover,
   .new-thought button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: var(--color--primary);
+    color: var(--color-bg);
   }
   
   .new-thought button.alternative {

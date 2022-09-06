@@ -46,7 +46,7 @@ function Sports() {
             <Card
               className={classes.root}
               key={id}
-              style={{ backgroundColor: "#eec6c6", color: "#40005d" }}
+              style={{ backgroundColor: "#7D7DD7", color: "#ffffff" }}
             >
               <CardMedia className={classes.media} image={img}></CardMedia>
               <CardHeader title={title} className="font_style"></CardHeader>
@@ -68,13 +68,13 @@ function Sports() {
             "& > :not(style) + :not(style)": { ml: 10 },
           }}
         >
-          <GoLocation />
+          <GoLocation style={{color:"#5555C0"}}/>
           {SportLocationData.map(({ id, locationName, locationLink }) => {
             return (
               <Link
                 href={locationLink}
                 variant="body2"
-                style={{ color: "white", fontFamily: "Poppins" }}
+                style={{ color: "#5555C0", fontFamily: "Poppins" }}
                 key={id}
               >
                 {locationName}
@@ -93,7 +93,7 @@ function Sports() {
       >
         <Card
           className={classes.root}
-          style={{ backgroundColor: "#eec6c6", color: "#40005d" }}
+          style={{ backgroundColor: "#7D7DD7", color: "#ffffff" }}
         >
           <CardHeader
             title="Tips!!!"
@@ -105,7 +105,7 @@ function Sports() {
             </Typography>
             <Link
               href="https://sites.tuni.fi/sportuni-en/find-your-sport/group-exercise/group-exercise-schedule/"
-              style={{ fontFamily: "Poppins" }}
+              style={{ fontFamily: "Poppins", color:"#4A4A4A" }}
             >
               SportUni Time Selection
             </Link>

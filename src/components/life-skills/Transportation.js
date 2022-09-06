@@ -37,8 +37,8 @@ const Transpotation = (props) => {
                 className={classes.root}
                 key={id}
                 style={{
-                  backgroundColor: "#eec6c6",
-                  color: "#40005d",
+                  backgroundColor: "#ffffff",
+                  color: "#4A4A4A",
                   fontFamily: "Poppins",
                 }}
               >
@@ -51,7 +51,7 @@ const Transpotation = (props) => {
                 <CardContent>
                   <Typography style={{ fontFamily: "Poppins" }}>
                     Information:
-                    <Link href={Info} style={{ fontFamily: "Poppins" }}>
+                    <Link href={Info} style={{ fontFamily: "Poppins", color:"#5555C0"  }}>
                       Click me!
                     </Link>
                   </Typography>
