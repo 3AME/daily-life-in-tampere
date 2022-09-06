@@ -13,24 +13,36 @@ import "./ViewDataList.css";
  *  Showing lakes, museums, and forests data. 
 
  */
- const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
+    margin: "0.3rem",
+    color: "#4A4A4A",
+    backgroundColor: "#ffffff",
+    border: "3px solid #7D7DD7",
     "& > *": {
-      margin: theme.spacing(0.5)
-    }
-  }
+      margin: theme.spacing(0.5),
+    },
+  },
+  icon: {
+    color: "#5555C0",
+  },
 }));
 const StyledChip = withStyles({
-  root:{
-    "&&:hover":{
-      backgroundColor:"#7D7DD7"
-    }
-  }
+  root: {
+    "&&:hover": {
+      backgroundColor: "#7D7DD7",
+      color:"#ffffff",
+    },
+  },
+  icon: {
+    "&&:hover": {
+      color: "#ffffff",
+    },
+  },
 })(Chip);
 const ViewDataList = () => {
+  const classes = useStyles();
   return (
     <Stack direction="row" spacing={2}>
       <div className="view-data-list css-1yjo05o">
@@ -43,40 +55,39 @@ const ViewDataList = () => {
             {Museums.map((museum) => (
               <StyledChip
                 key={museum.id}
-                icon={<MuseumIcon style={{ color: "#5555C0" }} />}
+                icon={<MuseumIcon className={classes.icon} />}
                 label={museum.location}
                 component="a"
                 href={museum.locationLink}
                 clickable
-                style={{ margin: "0.3rem", fontFamily: "Poppins", color:"#4A4A4A", border:"3px solid #7D7DD7", backgroundColor:"#ffffff"  }}
-                className="MuiChip-label"
+                className={classes.root}
               />
             ))}
           </div>
 
           <div className="view-data-item">
             {Lakes.map((lake) => (
-              <Chip
+              <StyledChip
                 key={lake.id}
-                icon={<ForestIcon style={{ color: "#5555C0" }} />}
+                icon={<ForestIcon className={classes.icon} />}
                 label={lake.location}
                 component="a"
                 href={lake.locationLink}
                 clickable
-                style={{ margin: "0.3rem", color:"#4A4A4A", border:"3px solid #7D7DD7", backgroundColor:"#ffffff" }}
+                className={classes.root}
               />
             ))}
           </div>
           <div className="view-data-item">
             {Forests.map((forest) => (
-              <Chip
+              <StyledChip
                 key={forest.id}
-                icon={<WaterIcon style={{ color: "#5555C0"}} />}
+                icon={<WaterIcon className={classes.icon} />}
                 label={forest.location}
                 component="a"
                 href={forest.locationLink}
                 clickable
-                style={{ margin: "0.3rem", color:"#4A4A4A", border:"3px solid #7D7DD7", backgroundColor:"#ffffff",   }}
+                className={classes.root}
               />
             ))}
           </div>

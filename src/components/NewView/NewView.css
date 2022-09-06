@@ -23,7 +23,7 @@
   .new-view button:hover,
   .new-view button:active {
     background-color: var(--color--primary);
-    color: var(--color-bg);
+    color: var(--color-bg); 
   }
   
   .new-view button.alternative {

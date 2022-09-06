@@ -9,18 +9,40 @@ import "./supermarket.css";
  *  This is transportation component.
  *  It will import transportation data from TrafficData.js, and use map to present data one by one. Use the Card in the material ui to display data.
  */
-const useStyles = makeStyles((theme) => ({
+ const useStyles = makeStyles((theme) => ({
   root: {
-    // maxWidth: 1000,
     width: 350,
-    height: 510,
+    height: 560,
     marginTop: "2rem",
-    borderRadius: "16px",
-    color: "#fffff",
+    borderRadius: "20px",
+    backgroundColor: "#7d7dd7",
+    border: "0.5px solid #7D7DD7",
+    color:"#4A4A4A",
+    "& > *": {
+      margin: theme.spacing(0.5),
+    },
+    "&&:hover":{
+      backgroundColor:"#7d7dd7",
+      color:"#ffffff"
+    }
   },
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+  },
+  styleLink: {
+    color:"#7d7dd7", //Don't know why this doesn't work.
+    "&&:hover":{
+      color:"#ffffff"
+    }
+  },
+  typography: {
+    fontFamily: "Poppins",
+    color:"#4A4A4A",
+    link:{color:"#5555C0"},
+    "&&:hover":{
+      color:"#ffffff"
+    }
   },
 }));
 
@@ -36,33 +58,28 @@ const Transpotation = (props) => {
               <Card
                 className={classes.root}
                 key={id}
-                style={{
-                  backgroundColor: "#ffffff",
-                  color: "#4A4A4A",
-                  fontFamily: "Poppins",
-                }}
               >
                 <CardHeader
                   title={Title}
-                  style={{ fontFamily: "Poppins" }}
+                  className={classes.typography}
                 ></CardHeader>
                 <CardMedia className={classes.media} image={Img}></CardMedia>
 
                 <CardContent>
-                  <Typography style={{ fontFamily: "Poppins" }}>
+                  <Typography className={classes.typography}>
                     Information:
-                    <Link href={Info} style={{ fontFamily: "Poppins", color:"#5555C0"  }}>
+                    <Link href={Info} className={classes.styleLink}>
                       Click me!
                     </Link>
                   </Typography>
                 </CardContent>
                 <CardContent>
-                  <Typography style={{ fontFamily: "Poppins" }}>
+                  <Typography className={classes.typography}>
                     Advantages:{Advantages}
                   </Typography>
                 </CardContent>
                 <CardContent>
-                  <Typography style={{ fontFamily: "Poppins" }}>
+                  <Typography className={classes.typography}>
                     Disadvantages:{Disadvantages}
                   </Typography>
                 </CardContent>
