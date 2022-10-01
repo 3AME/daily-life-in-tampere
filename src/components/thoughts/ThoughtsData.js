@@ -25,6 +25,11 @@ const DUMMY_Thoughts = [
     thoughtContent:
       "Something defining yourself means communicating what you won't allow and when you'll pack up and leave.",
   },
+  {
+    id: "t6",
+    thoughtContent:
+      "Don't look back, you're not going that way.",
+  },
 ];
 
 export default DUMMY_Thoughts;
